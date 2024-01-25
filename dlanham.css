@@ -1,0 +1,483 @@
+/* ------------------------------ 
+              basics             
+   ------------------------------*/
+
+html {
+	background: #101B27;
+	margin: 0;
+	padding: 0;
+	max-width: 
+	}
+	
+body {
+	margin: 5vmax 0;
+	padding: 0;
+	font-family: chippewa-falls, Avenir Next, Segoe UI, Verdana, Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	text-align: center;
+	text-transform: lowercase;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+	}
+
+h1, h2, h3, h4, p, img  {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	border: none;
+	}
+	
+h1 {
+	color: #E8442B;
+	font-size: 3.5vmax;
+}
+	
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	}
+
+a {
+	color: #E8442B;
+	text-decoration: none;
+	}
+	
+a:hover {
+	color: #E8442B;
+	text-decoration: none;
+	}
+ 
+a:link, a:hover { cursor: pointer; }
+
+#about h2 {
+	color: #E8442B;
+	font-size: 3vmax;
+	padding: 1% 18%;
+	text-align: left;
+}
+	
+#about p, .aboutlinks li {
+	color: #5c6e83;
+	font-size: 1.5vmax;
+	font-family: Avenir Next, Segoe UI, Verdana, Helvetica, Arial, sans-serif;
+	text-transform: none;
+	margin-bottom: 1.6vmax;
+	padding: 0 18%;
+	text-align: left;
+	}
+	
+.aboutlinks li {
+	font-size: 1.2vmax;
+}
+	
+.hidden {
+	display: none;
+ 	}
+ 	
+/* ------------------------------ 
+            lightbox             
+   ------------------------------*/
+ 	
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+.lightbox-target {
+position: fixed;
+top: -100%;
+width: 100%;
+background: rgba(16,27,39,.8);
+width: 100%;
+opacity: 0;
+-webkit-transition: opacity .2s ease-in-out;
+-moz-transition: opacity .2s ease-in-out;
+-o-transition: opacity .2s ease-in-out;
+transition: opacity .2s ease-in-out;
+overflow: hidden;
+}
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+.lightbox-target img {
+margin: auto;
+position: absolute;
+top: 0;
+left:0;
+right:0;
+bottom: 0;
+max-height: 100%;
+max-width: 100%;
+}
+
+.arraycont {
+margin: 7% auto;
+position: absolute;
+top: 0;
+left:0;
+right:0;
+bottom: 0;
+height: 20vh;
+width: auto;
+}
+
+.arraycont img {
+margin: auto;
+padding: 1%;
+position: relative;
+height: auto;
+width: auto;
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+}
+
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+	
+/* ------------------------------ 
+         content            
+   ------------------------------*/   
+#content {
+	margin: 0 10%;
+}
+
+/* Title */
+#name {
+	font-size: 7vmax;
+	letter-spacing: 0.01em;
+	color: #E8442B;
+	line-height: 5vmax;
+	
+	/* SolidDrop */
+	text-shadow: 0 .3vmax 0 #1F3564;
+}
+
+/* Links */
+#linksnav {
+	margin-top: 3vmax;
+	color: #E7831E;
+}
+
+#linksnav li {
+	margin: 0 2vmax;
+}
+
+#linksnav img {
+	padding: .5vmax;
+	width: 2.3vmax;
+	height: 2.3vmax;
+}
+
+#linksnav a:hover {
+	background: #1f2f52;
+	border-radius: 1vmax;
+	}
+
+
+#linksnav li, #mainnav li {
+	display: inline-flex;
+}
+
+/* Nav */
+#mainnav {
+	margin: 1vmax 0 3vmax 0;
+	font-size: 2.5vmax;
+	letter-spacing: 0.005em;
+}
+
+#mainnav a {
+	padding: 0 2vmax .4vmax 2vmax;
+	margin-right: 1vmax;
+	color: #FFDD00;
+	text-decoration-line: underline;
+	}
+	
+#mainnav a:hover {
+	background: #1f2f52;
+	border-radius: 1vmax;
+	}
+
+#mainnav a.on {
+	text-decoration: none;
+	color: #101B27;
+	background: #FFDD00;
+	border-radius: 1vmax;
+	}
+	
+#artgrid {
+	margin: 3vmax 0;
+	font-size: 5vmax;
+}
+
+.cover {
+	position: relative;
+	margin: 0 0 2vmax 0;
+	height: 20vmax;
+	border-radius: 3vmin;
+	align-content: center;
+	overflow: hidden;
+	}
+	
+.cover img, .covertall img {
+	height: 100%;
+	min-width: 100%;
+	position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+	}
+	
+.covertall {
+	position: relative;
+	margin: 0 0 2vmax 0;
+	height: 30vmax;
+	border-radius: 3vmin;
+	align-content: center;
+	overflow: hidden;
+	}
+	
+	
+/* Note */
+.note {
+	display: inline-block;
+	padding: .2vmax 2vmax .5vmax 2vmax;
+	font-size: 2vmax;
+	color: #101B27;
+	background: #1f2f52;
+	border-radius: 1vmax;
+}
+
+.note a em {
+	text-decoration: underline;
+	font-style: normal;
+}
+
+.note a:hover em {
+	color: #4982bf;
+}
+.note a {
+	color: #2a5786;
+}	
+
+
+/* Footer */	
+#foot {
+	margin: 3vmax 0;
+	}
+
+#foot p, #foot a {
+	font-size: 1.5vmax;
+	color: #2a394d;
+	}
+
+#foot a:hover {
+	color: #3c779b;
+	text-decoration: underline;
+	}
+	
+/* ------------------------------ 
+          Animation page             
+   ------------------------------*/
+
+.youtube-player {
+    position: relative;
+    padding-bottom: 56.23%;
+    /* Use 75% for 4:3 videos */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #101B27;
+    margin: 3vmax 0;
+    border-radius: 3vmin;
+}
+
+.youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+
+.youtube-player img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    transition: .4s all;
+}
+
+.youtube-player img:hover {
+    cursor: hand;
+}
+
+.youtube-player .play {
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+    position: absolute;
+    background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+    cursor: pointer;
+}
+
+
+
+/* ------------------------------ 
+               shop             
+   ------------------------------*/
+
+.shopitem {
+	width: 170px;
+	float: left;
+	margin: 0 0px 40px 40px;
+	padding: 0px;
+	}
+	
+.sold {
+	opacity: .4;
+	}
+	
+#shop {
+	margin-top: 30px;
+	margin-left: 20px;
+	max-width: 850px;
+	}
+	
+#shop .post p, #shop .post h3 {
+	margin-left: 2.3%;
+	max-width: 70%;
+	}
+
+#shop .post {
+	margin: 10px 0;
+	background: none;
+	}
+	
+#shop .price {
+	max-width: 30%;
+	color: #4c942f;
+	font-size: 20px;
+	}
+	
+#shop .price em {
+	color: #6e8097;
+	font-size: 14px;
+	font-style: normal;
+	}
+	
+#shop form {
+	float: left;
+	padding: .35em 0 0 10px;
+	height: auto;
+	}
+	
+#shop .button {
+	margin: 0px 0 0 19px;
+	padding: 4px 12px;
+	width: auto;
+	clear: left;
+	}
+
+.itempreview {
+	float: left;
+	margin: 0px 20px 0 0;
+	width: 23.12%;
+	height: auto;
+	border-radius: 10px;
+	}
+
+/* ------------------------------ 
+           iPhone X Layout          
+   ------------------------------*/
+
+@media only screen
+and (min-device-width : 320px) 
+and (max-device-width : 812px)
+and (-webkit-min-device-pixel-ratio : 2)	{
+	
+	#content {
+		margin: 0 10px;
+	}
+	
+	#name {
+		font-size: 55px;
+		/* SolidDrop */
+		text-shadow: 0 .5vmax 0 #1F3564;
+	}
+	
+	#linksnav li {
+		margin: 0 5px;
+	}
+	
+	#linksnav {
+		margin-top: 30px;
+	}
+	#linksnav img {
+		width: 20px;
+		height: 20px;
+	}
+	
+	#mainnav {
+		font-size: 22px;
+	}
+	
+	#mainnav a {
+		padding: 0 10px 4px 10px;
+		margin-right: 10px;
+	}
+	
+	.note {
+		font-size: 18px;
+	}
+	#artgrid {
+		margin: 20px 0;
+	}
+	.cover {
+		margin: 0 0 10px 0;
+		height: 150px;
+		border-radius: 10px;
+	}
+	.covertall {
+		margin: 0 0 10px 0;
+		height: 200px;
+		border-radius: 10px;
+	}
+
+}
+
+/* ------------------------------ 
+           iPad Layout          
+   ------------------------------*/
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2)  {
+
+	
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+  <head>
+    <title>Viktoriya Kashcheieva</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="en-us" />
+	
+  	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	
+  	<meta name="Description" content="Drawings and other creations by Viktoriya Kashcheieva" />
+  	<meta name="keywords" content="art, illustration, drawing, painting, vector, icon, wallpaper, desktops" />
+  	<meta name="author" content="Viktoriya Kashcheieva" />
+	
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  	<link rel="icon" type="image/png" href="/favicon.ico" />
+	
+  	<link rel="stylesheet" type="text/css" href="dlanham.css" />
+	<link rel="stylesheet" href="https://use.typekit.net/avv7pmt.css">	
+	
+	<!-- Mint -->
+  	<script src="mint/?js" type="text/javascript"></script>
+    	
+  	<!-- jQuery library -->
+	<script type="text/javascript" src="js/lazy.js"></script>
+	
+	<!-- video embed -->
+	<script>
+	
+	    /* Light YouTube Embeds by @labnol */
+	    /* Web: http://labnol.org/?p=27941 */
+	
+	    document.addEventListener("DOMContentLoaded",
+	        function() {
+	            var div, n,
+	                v = document.getElementsByClassName("youtube-player");
+	            for (n = 0; n < v.length; n++) {
+	                div = document.createElement("div");
+	                div.setAttribute("data-id", v[n].dataset.id);
+	                div.innerHTML = labnolThumb(v[n].dataset.id);
+	                div.onclick = labnolIframe;
+	                v[n].appendChild(div);
+	            }
+	        });
+	
+	    function labnolThumb(id) {
+	        var thumb = '<img src="https://i.ytimg.com/vi/ID/maxresdefault.jpg">',
+	            play = '<div class="play"></div>';
+	        return thumb.replace("ID", id) + play;
+	    }
+	
+	    function labnolIframe() {
+	        var iframe = document.createElement("iframe");
+	        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+	        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+	        iframe.setAttribute("frameborder", "0");
+	        iframe.setAttribute("allowfullscreen", "1");
+	        this.parentNode.replaceChild(iframe, this);
+	    }
+	
+	</script>	
+  </head>
+  
+  <body>
+	  <div id="content">
+			<h1 id="name"><a href="about.html">Viktoriya Kashcheieva</a></h1>
+			<ul id="linksnav">
+				<li><a href="http://www.twitter.com/dlanham"><img src="graphics/icon-twitter.png" alt="twitter" /></a></li>
+				<li><a href="http://instagram.com/dlanham"><img src="graphics/icon-instagram.png" alt="instagram" /></a></li>
+				<li><a href="http://sketches.dlanham.com/"><img src="graphics/icon-tumblr.png" alt="tumblr" /></a></li>
+			</ul>
+			<ul id="mainnav">
+				<li><a href="/">Art</a></li>
+				<li><a class="on" href="animation.html">Animation</a></li>
+				<li><a href="design.html">Design</a></li>
+				<li><a href="shop.html">Shop</a></li>
+			</ul>
+				  
+			<div id="artgrid">
+				<div class="youtube-player" data-id="U_TV0FmiDdQ"></div>
+				<div class="youtube-player" data-id="jTO242Or52g"></div>
+				<div class="youtube-player" data-id="2HSgB8zaPxQ"></div>				
+		
+			</div>
+			<div id="foot">
+				<p>All Content Copyright © 2019 Viktoriya Kashcheieva</p>
+				<p>Site hosting by <a href="http://www.kittenstar.com">KittenStar</a></p>
+			</div>
+		</div>	  	
+	  
+  </body>
+</html>
